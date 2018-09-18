@@ -61,7 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AlphaControl.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
@@ -115,10 +114,16 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineMixer.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
-    <Compile Include="Assets\DragCharacter.cs" />
     <Compile Include="Assets\Script\GameServer\GameContentsProcess.cs" />
     <Compile Include="Assets\Script\GameServer\GameNetWork.cs" />
     <Compile Include="Assets\Script\GameServer\GamePacketProcess.cs" />
+    <Compile Include="Assets\Script\InGameScript\AlphaControl.cs" />
+    <Compile Include="Assets\Script\InGameScript\CharacterManager.cs" />
+    <Compile Include="Assets\Script\InGameScript\DragCharacter.cs" />
+    <Compile Include="Assets\Script\InGameScript\EnemyScript.cs" />
+    <Compile Include="Assets\Script\InGameScript\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Script\InGameScript\PlayerInputManager.cs" />
+    <Compile Include="Assets\Script\InGameScript\SelectEffectPostitionManagement.cs" />
     <Compile Include="Assets\Script\LogInServer\LogInContentsProcess.cs" />
     <Compile Include="Assets\Script\LogInServer\LogInNetwork.cs" />
     <Compile Include="Assets\Script\LogInServer\LoginPacketProcess.cs" />
@@ -135,16 +140,16 @@
     <Compile Include="Assets\Script\UIScript\SceneChange.cs" />
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/admin/Desktop/0913roes/RoseServer-master/Final/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/admin/Desktop/FinalProject/Final/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/admin/Desktop/0913roes/RoseServer-master/Final/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/admin/Desktop/FinalProject/Final/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/admin/Desktop/0913roes/RoseServer-master/Final/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/admin/Desktop/FinalProject/Final/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/admin/Desktop/0913roes/RoseServer-master/Final/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/admin/Desktop/FinalProject/Final/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
