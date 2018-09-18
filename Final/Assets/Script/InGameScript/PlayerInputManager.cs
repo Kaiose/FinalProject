@@ -181,7 +181,11 @@ public class PlayerInputManager : MonoBehaviour {
             case Direction.T:
                 transform.position = new Vector3(transform.position.x, transform.position.y + Speed*Time.deltaTime, transform.position.z);
                 animator.SetBool(m_HashWalkTopPara, true);
-                spriteRenderer.flipX = false;
+                if (spriteRenderer.flipX)
+                    spriteRenderer.flipX = true;
+                else
+                    spriteRenderer.flipX = false;
+                
                 return;
 
             case Direction.TTR:
@@ -221,8 +225,11 @@ public class PlayerInputManager : MonoBehaviour {
             case Direction.B:
                 transform.position = new Vector3(transform.position.x , transform.position.y - Speed * Time.deltaTime, transform.position.z);
                 animator.SetBool(m_HashWalkBottomPara, true);
-                spriteRenderer.flipX = false;
-                
+                if (spriteRenderer.flipX)
+                    spriteRenderer.flipX = true;
+                else
+                    spriteRenderer.flipX = false;
+
                 return;
 
             case Direction.BBL:
@@ -230,23 +237,20 @@ public class PlayerInputManager : MonoBehaviour {
 
             case Direction.BL:
 
-
-
-                spriteRenderer.flipX = true ;
                 transform.position = new Vector3(transform.position.x - Speed * Time.deltaTime / Mathf.Sqrt(2), transform.position.y - Speed * Time.deltaTime / Mathf.Sqrt(2), transform.position.z);
                 animator.SetBool(m_HashWalkBottomLeftPara, true);
-
+                spriteRenderer.flipX = true;
                 return;
 
             case Direction.LLB:
                 return;
             case Direction.L:
-                spriteRenderer.flipX = true;
+
 
                 transform.position = new Vector3(transform.position.x - Speed * Time.deltaTime, transform.position.y, transform.position.z);
                 animator.SetBool(m_HashWalkLeftPara, true);
 
-                
+                spriteRenderer.flipX = true;
 
                 return;
 
@@ -255,10 +259,12 @@ public class PlayerInputManager : MonoBehaviour {
 
             case Direction.LT:
 
-                spriteRenderer.flipX = true;
+
                 transform.position = new Vector3(transform.position.x - Speed * Time.deltaTime / Mathf.Sqrt(2), transform.position.y + Speed * Time.deltaTime / Mathf.Sqrt(2), transform.position.z);
 
                 animator.SetBool(m_HashWalkTopLeftPara, true);
+
+                spriteRenderer.flipX = true;
                 return;
 
             case Direction.TTL:
@@ -273,8 +279,10 @@ public class PlayerInputManager : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
         {
+    
             InitializeAnimationPara(m_HashWalkTopLeftPara);
-         //   animator.SetBool(m_HashWalkPara, true);
+            
+            //   animator.SetBool(m_HashWalkPara, true);
             direction = Direction.LT;
         }
 
@@ -307,6 +315,7 @@ public class PlayerInputManager : MonoBehaviour {
 
         else if (Input.GetKey(KeyCode.W))
         {
+            
             InitializeAnimationPara(m_HashWalkTopPara);
         //    animator.SetBool(m_HashWalkPara, true);
             direction = Direction.T;
@@ -337,9 +346,11 @@ public class PlayerInputManager : MonoBehaviour {
 
     void Dead()
     {
+
         direction = Direction.N;
         animator.SetBool(m_HashWalkPara, false);
         animator.SetTrigger(m_HashDeadPara);
+
     }
     
     void InitializeAnimationPara(int HashPara)
